@@ -37,7 +37,9 @@
   - `npm run typecheck`
   - `npm run build`
 - Submission stabilization run:
+  - Passed: `docker compose ps` with PostgreSQL `db` service healthy.
   - Passed: `uv sync`
+  - Passed: `uv run alembic upgrade head`
   - Passed: `uv run pytest`
   - Passed: `uv run pyright`
   - Passed: `uv run ruff check .`
@@ -46,8 +48,6 @@
   - Passed: `npm run typecheck`
   - Passed: `npm run build`
   - Passed: `npm audit --omit=dev`
-  - Not completed locally: `docker compose up -d db` because Docker daemon was not running.
-  - Not completed locally: `uv run alembic upgrade head` because PostgreSQL was unavailable after Docker startup failed.
 
 ## Known Limitations
 
